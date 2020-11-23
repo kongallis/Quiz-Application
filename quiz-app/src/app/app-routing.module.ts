@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IntroductionComponent } from './introduction/introduction.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultComponent } from './result/result.component';
 
 const appRoutes: Routes = [   
 {path: "quiz", component: QuizComponent},
 {path: "result", component: ResultComponent},
-{path: "", redirectTo:"/quiz", pathMatch: "full"},];
+{path: "intro", component: IntroductionComponent},
+{path: "", redirectTo:"/intro", pathMatch: "full"},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],

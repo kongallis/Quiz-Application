@@ -9,13 +9,15 @@ import { ResultComponent } from './result/result.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { QuizService } from 'src/shared/quiz.service';
+import { IntroductionComponent } from './introduction/introduction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     QuizComponent,
-    ResultComponent
+    ResultComponent,
+    IntroductionComponent
   ],
   imports: [
     BrowserModule,

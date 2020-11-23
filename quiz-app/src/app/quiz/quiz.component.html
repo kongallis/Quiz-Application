@@ -1,2 +1,31 @@
 <app-navbar></app-navbar>
-<p>quiz works!</p>
+
+<!-- <div *ngFor="let question of questions">
+    <p>Category: {{ question.category }}</p>
+    
+    <p>Question: {{ question.question }}</p>
+    <ul>
+        <li *ngFor="let answer of shuffleAnswers(question)">
+            {{ answer }}
+        </li>
+    </ul>
+<hr>
+</div> -->
+
+
+<div class="row" *ngFor="let question of questions">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{{ question.category }}</span>
+          <p>{{ question.question }}</p>
+          <ul>
+            <li (click)="selectedAnswer($event)" *ngFor="let answer of shuffleAnswers(question)">
+                {{ answer }}
+            </li>
+        </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>

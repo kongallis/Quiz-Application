@@ -9,7 +9,7 @@ import { GetResponse } from 'src/models/GetResponse';
 export class QuizService {
 
   // WEB API URL
-  readonly rootUrl = "https://opentdb.com/api.php?amount=10";
+  readonly rootUrl = "https://opentdb.com/api.php?amount=5&type=multiple";
 
   constructor(private http: HttpClient) { }
 

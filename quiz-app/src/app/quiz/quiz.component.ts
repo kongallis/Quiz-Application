@@ -25,5 +25,21 @@ export class QuizComponent implements OnInit {
 
   }
 
+  // Combine into 1 array all answers and returns a shuffled array of themn
+  shuffleAnswers(question: Question): string[] {
+    let wrongAnswers: string[] = question.incorrect_answers;
+    let correctAnswer: string[] = [question.correct_answer];
+    return this.shuffle(wrongAnswers.concat(correctAnswer));
+  }
 
+  // Shuffles an array of answers
+  shuffle(array: string[]): string[] {
+    return array.sort(() => Math.random() - 0.5)
+  }
+
+  selectedAnswer(e: any) {
+    console.log(e.target);
+    console.log(e.target.value);
+    
+  }
 }
