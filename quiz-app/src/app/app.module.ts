@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { QuizService } from 'src/shared/quiz.service';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,14 @@ import { IntroductionComponent } from './introduction/introduction.component';
     NavbarComponent,
     QuizComponent,
     ResultComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [QuizService],
   bootstrap: [AppComponent]
