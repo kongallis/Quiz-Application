@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ApiInfoComponent } from './api-info/api-info.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { QuizComponent } from './quiz/quiz.component';
@@ -10,6 +11,7 @@ const appRoutes: Routes = [
 {path: "result", component: ResultComponent},
 {path: "intro", component: IntroductionComponent},
 {path: "categories", component: CategoriesComponent},
+{path: "rest-info", component: ApiInfoComponent},
 {path: "", redirectTo:"/intro", pathMatch: "full"},
 ];
 
